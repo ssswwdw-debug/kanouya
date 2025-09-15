@@ -1,2 +1,0 @@
-# kanouya
-website
