@@ -1,0 +1,449 @@
+/* ぜんたい  */
+body {
+  font-family: 'Noto Serif JP', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+div p{
+  color: #333;
+}
+
+#storename :hover{
+  color: #f19cbb;
+}
+#comment{
+  font-size: 24px;
+}
+#comment p{
+  padding: 10px;
+  text-decoration:underline ;
+}
+.sulogan{
+  position:relative;
+}
+.sulogan p {
+  font-size: 5vw;
+  position: relative;
+  color: white;
+  top: 40vw;
+  text-align: center;
+  
+  }
+.sulogan img{
+  width: 70vw;
+
+}
+/* ヘッダ- */
+header {
+  font-family: 'Noto Serif JP', sans-serif;
+  background: white;
+  color: white;
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 101;
+}
+header img{
+  display: inline;
+  position: absolute;
+  border-radius: 100%;
+  
+  width: 100px;
+}
+
+header h1 a{
+  color: #f19cbb;
+
+}
+header h1 a :hover {
+  color: #f19cbb;
+}
+header h1{
+  display: inline;
+  position: absolute;
+  top: 25px;
+  left: 105px;
+  text-align: left;
+  position: relative;
+  font-family: 'Noto Serif JP', sans-serif;
+  /* color: #4169e1; */
+  color: #f19cbb;
+}
+header p{
+  position: absolute;
+  top:80px;
+  left: 80px;
+}
+
+/* メイン */
+main{
+  font-family: 'Noto Serif JP', sans-serif;
+  margin-top: 150px;
+  text-align: center;
+
+}
+
+/* ハンバーガーメニュー */
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  background-color: #f19cbb	;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color:#ffffff;
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+/* ハンバーガーメニュー動く */
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+/* チェックボックスを隠す */
+#menu-btn-check {
+  display: none;
+}
+/* メニュー */
+.menu-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  background-color: #333;
+}
+
+.menu-content ul {
+  padding: 70px 10px 0;
+}
+.menu-content ul li {
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color:#ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+.menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 75%;
+  top: 16px;
+}
+/* めにゅー動作 */
+.menu-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left:100%;/*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background-color: #333;
+  transition: all 0.5s;/*アニメーション設定*/
+}
+#menu-btn-check:checked ~ .menu-content {
+  left: 73%;/*メニューを画面内へ*/
+}
+
+
+
+/* スライドショー */
+*{margin:0; padding:0; list-style:none;}
+a{text-decoration:none; color:#666;}
+a:hover{color:#1bc1a3;}
+body, hmtl{background: #ecf0f1; font-family: 'Anton', sans-serif;}
+
+
+#wrapper{
+  width:500px;
+  margin:50px auto;
+  height:300px;
+  position:relative;
+  color:#ffffff;
+  text-shadow:rgba(0,0,0,0.1) 2px 2px 0px;
+  z-index: 0;
+}
+
+
+#slider-wrap{
+  width:500px;
+  height:300px;
+  position:relative;
+  overflow:hidden;
+}
+
+#slider-wrap ul#slider{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;   
+}
+
+#slider-wrap ul#slider li{
+  float:left;
+  position:relative;
+  width:500px;
+  height:300px; 
+}
+#slider-wrap ul#slider li img{
+  float:left;
+  position: relative;
+  width:500px;
+  height:300px; 
+}
+/* #slider-wrap ul#slider li > div{
+  position:absolute;
+  top:20px;
+  left:35px;  
+} */
+
+/* #slider-wrap ul#slider li > div h3{
+  font-size:36px;
+  text-transform:uppercase; 
+} */
+
+/* #slider-wrap ul#slider li > div span{
+  font-family: Neucha, Arial, sans serif;
+  font-size:21px;
+} */
+
+#slider-wrap ul#slider li i{
+  text-align:center;
+  line-height:400px;
+  display:block;
+  width:100%;
+  font-size:90px; 
+}
+
+
+/*btns*/
+.btns{
+  position:absolute;
+  width:50px;
+  height:60px;
+  top:50%;
+  margin-top:-25px;
+  line-height:57px;
+  text-align:center;
+  cursor:pointer; 
+  background:rgba(0,0,0,0.1);
+  z-index:1;
+  
+  
+  -webkit-user-select: none;  
+  -moz-user-select: none; 
+  -khtml-user-select: none; 
+  -ms-user-select: none;
+  
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.btns:hover{
+  background:rgba(0,0,0,0.3); 
+}
+
+#next{right:-50px; border-radius:7px 0px 0px 7px;}
+#previous{left:-50px; border-radius:0px 7px 7px 7px;}
+#counter{
+  top: 30px;
+  right:35px;
+  width:auto;
+  position:absolute;
+}
+
+#slider-wrap.active #next{right:0px;}
+#slider-wrap.active #previous{left:0px;}
+
+
+/*bar*/
+#pagination-wrap{
+  min-width:20px;
+  margin-top:350px;
+  margin-left: auto; 
+  margin-right: auto;
+  height:15px;
+  position:relative;
+  text-align:center;
+}
+
+#pagination-wrap ul {
+  width:100%;
+}
+
+#pagination-wrap ul li{
+  margin: 0 4px;
+  display: inline-block;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#fff;
+  opacity:0.5;
+  position:relative;
+  top:0;
+  
+  
+}
+
+#pagination-wrap ul li.active{
+  width:12px;
+  height:12px;
+  top:3px;
+  opacity:1;
+  box-shadow:rgba(0,0,0,0.1) 1px 1px 0px; 
+}
+
+
+
+
+/*Header*/
+h1, h2{text-shadow:none; text-align:center;}
+h1{ color: #666; text-transform:uppercase;  font-size:36px;}
+h2{ color: #7f8c8d; font-family: 'Noto Serif JP', Arial, sans serif; font-size:18px; margin-bottom:30px;} 
+
+
+
+
+/*ANIMATION*/
+#slider-wrap ul, #pagination-wrap ul li{
+  -webkit-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  -moz-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  -o-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  -ms-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  transition: all 0.3s cubic-bezier(1,.01,.32,1); 
+}
+
+@media (min-width: 992px){
+	.menu-content{
+		left: 85%;
+    top: 5%;
+    background-color: #ffffff;
+  }
+  .menu-content ul li a{
+    color: #333;
+  }
+  .menu-btn{
+    display: none;
+  }
+}
+
+/* ===== About Box (私について) ===== */
+.about-box{
+  max-width: 900px;
+  margin: 24px auto 40px;
+  padding: 22px 20px;
+  background: #fff;
+  border: 1px solid #e6dac4;           /* 生成り×金寄りの淡い枠線 */
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  text-align: left;                     /* 段落は左寄せで読みやすく */
+  line-height: 1.9;
+  position: relative;
+}
+
+/* 左側に細い金ライン（控えめアクセント） */
+.about-box::before{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width: 6px;
+  border-radius: 16px 0 0 16px;
+  background: linear-gradient(180deg, #e8d6a3, #c6a15b);
+  opacity: .45;
+}
+
+/* 文字色と余白の最適化（既存の div p { color: #333; } と相性良） */
+.about-box p{
+  color: #333;
+  margin: 0 0 10px;
+}
+
+/* 見出しのすぐ下に置く場合の間隔調整（任意） */
+#myself{
+  margin-bottom: 10px;
+}
+
+/* モバイルでの読みやすさ */
+@media (max-width: 600px){
+  .about-box{
+    margin: 18px 14px 32px;
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+  .about-box::before{ width: 5px; }
+}
+
+/* ORDERMADE テキスト表示アニメーション */
+#comment p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#comment p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SULOGAN の文字をふわっと表示 */
+.sulogan p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.sulogan p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 画像は常に固定表示 */
+.sulogan img {
+  opacity: 1;
+  transform: none;
+}
